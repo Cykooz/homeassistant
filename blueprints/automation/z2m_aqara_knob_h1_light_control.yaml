@@ -1,5 +1,5 @@
 blueprint:
-  name: Aqara Rotary Knob H1 – Adjustable Brightness & Color Temperature (Z2M)
+  name: Aqara Rotary Knob H1
   description: |-
     ## Supporting
       - Aqara Rotary Knob H1 (wireless) [ZNXNKG02LM](https://www.zigbee2mqtt.io/devices/ZNXNKG02LM.html)
