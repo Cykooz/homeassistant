@@ -36,25 +36,6 @@ blueprint:
         temporarily unavailable, available member values provide the gesture base.
         A missing value is never treated as 0% brightness.
 
-    ## Breaking Change: Direct Per-Tick Controls
-      - The legacy step-size multiplier behavior is deprecated. The existing input IDs are retained, but their values now have direct physical meanings.
-      - The obsolete `translate_friendly_name` compatibility input has been removed.
-        It was unused and has no replacement. Existing automations may retain the
-        old saved key until they are edited, but Home Assistant ignores that extra
-        input. The required `knob` input remains because it supplies the
-        Zigbee2MQTT device-topic segment for the single MQTT trigger.
-      - `Target Light` now accepts one `light` entity selected in the UI. Direct
-        entity lists and templates are no longer supported. Re-select one light or
-        one light-group entity and save each existing automation after updating.
-      - One knob tick is `12 degrees`.
-      - Brightness is now configured as `1-100 %/tick`; the default is exactly `2 %/tick`.
-      - Pressed-rotation color temperature is now configured as `1-10000 K/tick`; the default is `100 K/tick`.
-      - After re-importing this blueprint, open every automation created from it, review these two inputs, and save it again.
-      - Existing brightness values above `100` are no longer valid and must be changed to a value from `1` through `100`.
-      - To preserve the old default color-temperature response, change a saved value of `5` to `60 K/tick`.
-      - Hold Repeat Maximum Duration now defaults to `11 seconds` and cannot be
-        set higher. Existing values above `11` must be changed before saving.
-
     ## Customizing Options
 
       - `Target Light` must be one `light` entity. To control multiple lights,
